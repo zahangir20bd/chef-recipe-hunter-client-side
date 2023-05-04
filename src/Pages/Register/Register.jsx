@@ -7,6 +7,11 @@ const Register = () => {
   const navigate = useNavigate();
 
   const [error, setError] = useState("");
+  const [accept, setAccept] = useState(false);
+
+  const handleAccept = (event) => {
+    setAccept(event.target.checked);
+  };
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -94,15 +99,22 @@ const Register = () => {
             </div>
             <div className=" flex items-center gap-2">
               <input
+                onClick={handleAccept}
                 type="checkbox"
                 name="accept-condition"
                 className="checkbox"
               />
-              <span>Accept Terms & Condition</span>
+              <span>
+                Accept <Link className="text-primary">Terms & Condition</Link>
+              </span>
             </div>
             <p className="text-red-700 text-center">{error}</p>
             <div className="form-control mt-6">
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                disabled={!accept}
+                className="btn btn-primary"
+              >
                 Register
               </button>
             </div>
