@@ -9,8 +9,6 @@ const Recipes = () => {
     return chef.chef_id == id;
   });
   const { chef_id, chef_name, chef_picture, experience, likes, recipes } = chef;
-  //   console.log(chefs);
-  //   console.log(recipes);
   return (
     <div className="mt-10">
       <div className="card lg:card-side bg-base-100 shadow-xl">

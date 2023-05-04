@@ -3,7 +3,6 @@ import { FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
-  //   console.log(chef);
   const { chef_id, chef_name, chef_picture, experience, likes, recipes } = chef;
 
   return (
