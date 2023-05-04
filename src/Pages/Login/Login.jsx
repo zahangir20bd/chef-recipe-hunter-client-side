@@ -53,7 +53,10 @@ const Login = () => {
                 </div>
                 <div>
                   <span>New to here? Go to..</span>
-                  <Link to="/register">Register</Link>
+                  <Link className="text-primary" to="/register">
+                    {" "}
+                    Register
+                  </Link>
                 </div>
               </div>
             </div>

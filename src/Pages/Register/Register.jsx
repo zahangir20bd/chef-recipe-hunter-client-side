@@ -63,7 +63,10 @@ const Register = () => {
             </div>
             <div>
               <span>Already have an account? Go to..</span>
-              <Link to="/login"> Login</Link>
+              <Link className="text-primary" to="/login">
+                {" "}
+                Login
+              </Link>
             </div>
           </div>
         </div>
