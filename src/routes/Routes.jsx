@@ -13,6 +13,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:5000/chefs"),
       },
       {
         path: "/login",
@@ -23,8 +24,9 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/recipes",
+        path: "/:id/recipes",
         element: <Recipes></Recipes>,
+        loader: () => fetch("http://localhost:5000/chefs"),
       },
     ],
   },

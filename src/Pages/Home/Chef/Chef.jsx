@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
-  console.log(chef);
+  //   console.log(chef);
   const { chef_id, chef_name, chef_picture, experience, likes, recipes } = chef;
 
   return (
@@ -22,7 +22,7 @@ const Chef = ({ chef }) => {
           <p>Likes: {likes}</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">
-              <Link to="/recipes">View Recipes</Link>
+              <Link to={`/${chef_id}/recipes`}>View Recipes</Link>
             </button>
           </div>
         </div>
