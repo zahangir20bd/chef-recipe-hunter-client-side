@@ -1,4 +1,5 @@
 import React from "react";
+import { FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
@@ -19,7 +20,10 @@ const Chef = ({ chef }) => {
           <h2 className="card-title">{chef_name}</h2>
           <h4 className="text-xl">Experience: {experience}</h4>
           <h5>Numbers of Recipes: {recipes.length}</h5>
-          <p>Likes: {likes}</p>
+          <p className="flex items-center gap-1">
+            <FaThumbsUp></FaThumbsUp> <span>{likes}</span>
+          </p>
+
           <div className="card-actions justify-end">
             <button className="btn btn-primary">
               <Link to={`/${chef_id}/recipes`}>View Recipes</Link>
