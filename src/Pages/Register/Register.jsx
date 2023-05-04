@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import { Form, Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, auth } = useContext(AuthContext);
 
   const [error, setError] = useState("");
 
@@ -29,7 +30,6 @@ const Register = () => {
       createUser(name, email, password, image)
         .then((result) => {
           const createdUser = result.user;
-          console.log(createdUser);
         })
         .catch((error) => {
           setError(error.message);

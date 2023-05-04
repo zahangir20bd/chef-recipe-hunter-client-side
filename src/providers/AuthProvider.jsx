@@ -3,6 +3,7 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -26,6 +27,8 @@ const AuthProvider = ({ children }) => {
     user,
     createUser,
     signIN,
+
+    auth,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
