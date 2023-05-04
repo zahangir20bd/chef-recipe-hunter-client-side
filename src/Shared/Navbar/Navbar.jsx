@@ -5,7 +5,13 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { FaSignOutAlt, FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="md:flex justify-between items-center mx-auto p-2">
       <h2 className="text-2xl font-bold my-4">
@@ -30,7 +36,7 @@ const Navbar = () => {
         {user ? (
           <div className="flex items-center">
             <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>
-            <button className=" ms-3 font-semibold">
+            <button onClick={handleLogOut} className=" ms-3 font-semibold">
               <FaSignOutAlt style={{ fontSize: "40px" }}></FaSignOutAlt>
             </button>
           </div>

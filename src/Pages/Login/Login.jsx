@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { signIN } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -17,6 +18,7 @@ const Login = () => {
     signIN(email, password)
       .then((result) => {
         const LoggedInUser = result.user;
+        navigate("/");
       })
       .catch((error) => {
         setError("Wrong email or password. Try again...");
