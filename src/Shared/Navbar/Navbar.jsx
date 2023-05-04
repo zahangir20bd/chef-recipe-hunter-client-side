@@ -64,9 +64,14 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <button className="my-4 bg-gradient-to-r from-[#8895e7] to-[#c364db] p-3 rounded-md text-white font-semibold">
-        <Link to="/">Login</Link>
-      </button>
+      <div>
+        <button className=" btn btn-primary text-white ms-3 font-semibold">
+          <Link to="/login">Login</Link>
+        </button>
+        <button className="btn btn-primary text-white ms-3 font-semibold">
+          <Link to="/register">Register</Link>
+        </button>
+      </div>
     </div>
   );
 };
