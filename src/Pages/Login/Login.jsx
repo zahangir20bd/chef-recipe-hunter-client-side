@@ -1,14 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Form, Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { signIN } = useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const handleLogin = (event) => {
     event.preventDefault();
+    setError("");
     const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIN(email, password)
+      .then((result) => {
+        const LoggedInUser = result.user;
+      })
+      .catch((error) => {
+        setError("Wrong email or password. Try again...");
+      });
   };
 
   return (
@@ -61,6 +73,7 @@ const Login = () => {
                 </Link>
               </label>
             </div>
+            <p className="text-red-700 text-center">{error}</p>
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary">
                 Login

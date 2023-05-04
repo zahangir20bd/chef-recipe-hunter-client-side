@@ -9,6 +9,7 @@ const Register = () => {
 
   const handleRegister = (event) => {
     event.preventDefault();
+    setError("");
     const form = event.target;
     const name = form.username.value;
     const email = form.email.value;
@@ -25,7 +26,7 @@ const Register = () => {
       );
     }
     if ((name, email, password)) {
-      createUser(email, password)
+      createUser(name, email, password, image)
         .then((result) => {
           const createdUser = result.user;
           console.log(createdUser);
@@ -97,7 +98,7 @@ const Register = () => {
               />
               <span>Accept Terms & Condition</span>
             </div>
-            <p className="text-red-700">{error}</p>
+            <p className="text-red-700 text-center">{error}</p>
             <div className="form-control mt-6">
               <button type="submit" className="btn btn-primary">
                 Register
