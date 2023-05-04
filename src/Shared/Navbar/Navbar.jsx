@@ -27,13 +27,13 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="flex items-center">
-        <div>
-          <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>
-        </div>
         {user ? (
-          <button className=" ms-3 font-semibold">
-            <FaSignOutAlt style={{ fontSize: "40px" }}></FaSignOutAlt>
-          </button>
+          <div className="flex items-center">
+            <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>
+            <button className=" ms-3 font-semibold">
+              <FaSignOutAlt style={{ fontSize: "40px" }}></FaSignOutAlt>
+            </button>
+          </div>
         ) : (
           <button className=" btn btn-primary text-white ms-3 font-semibold">
             <Link to="/login">Login</Link>
