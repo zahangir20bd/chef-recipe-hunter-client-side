@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./../../App.css";
 
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -24,11 +25,11 @@ const Navbar = () => {
           </li>
 
           <li>
-            <NavLink>Blogs</NavLink>
+            <NavLink to="/blogs">Blogs</NavLink>
           </li>
 
           <li>
-            <NavLink>About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
         </ul>
       </nav>
