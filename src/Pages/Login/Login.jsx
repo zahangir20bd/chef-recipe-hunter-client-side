@@ -33,7 +33,7 @@ const Login = () => {
       await googleSignIn();
       navigate("/");
     } catch (error) {
-      console.log(error);
+      setError(error.message);
     }
   };
   const handleGithubSign = async () => {
@@ -41,7 +41,7 @@ const Login = () => {
       await gitHubSignIN();
       navigate("/");
     } catch (error) {
-      console.log(error);
+      setError(error.message);
     }
   };
 

@@ -7,8 +7,6 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
-  signInWithRedirect,
-  updateProfile,
   GithubAuthProvider,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
