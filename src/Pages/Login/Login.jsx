@@ -27,19 +27,20 @@ const Login = () => {
         setError("Wrong email or password. Try again...");
       });
   };
-
   const handleGoogleSign = async () => {
+    setError("");
     try {
       await googleSignIn();
-      navigate("/");
+      navigate(from, { replace: true });
     } catch (error) {
       setError(error.message);
     }
   };
   const handleGithubSign = async () => {
+    setError("");
     try {
       await gitHubSignIN();
-      navigate("/");
+      navigate(from, { replace: true });
     } catch (error) {
       setError(error.message);
     }
