@@ -35,7 +35,6 @@ const Register = () => {
       createUser(name, email, password, image)
         .then((result) => {
           const createdUser = result.user;
-
           navigate("/");
         })
         .catch((error) => {

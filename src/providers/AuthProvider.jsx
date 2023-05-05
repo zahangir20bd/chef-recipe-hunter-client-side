@@ -5,7 +5,11 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
   updateProfile,
+  GithubAuthProvider,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -25,6 +29,18 @@ const AuthProvider = ({ children }) => {
   const signIN = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
+  };
+
+  const googleSignIn = () => {
+    setLoading(true);
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider);
+  };
+
+  const gitHubSignIN = () => {
+    setLoading(true);
+    const provider = new GithubAuthProvider();
+    signInWithPopup(auth, provider);
   };
 
   const logOut = () => {
@@ -50,6 +66,8 @@ const AuthProvider = ({ children }) => {
     signIN,
     logOut,
     loading,
+    googleSignIn,
+    gitHubSignIN,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

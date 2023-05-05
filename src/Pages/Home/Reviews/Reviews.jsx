@@ -6,7 +6,7 @@ import user4 from "./../../../assets/images/png/user4.png";
 
 const Reviews = () => {
   return (
-    <div className="mt-28">
+    <div className="mt-28 px-6">
       <h2 className="mx-auto text-center max-w-[500px] text-4xl font-bold">
         What Customers Are Saying About Us
       </h2>
