@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./../../App.css";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -27,16 +29,17 @@ const Navbar = () => {
           <li>
             <NavLink to="/blogs">Blogs</NavLink>
           </li>
-
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
         </ul>
       </nav>
       <div className="flex items-center">
         {user ? (
           <div className="flex items-center">
-            <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>
+            <FaUserCircle
+              data-tooltip-id="user-tooltip"
+              data-tooltip-content={user?.email}
+              style={{ fontSize: "40px" }}
+            ></FaUserCircle>
+            <Tooltip id="user-tooltip"></Tooltip>
             <button onClick={handleLogOut} className=" ms-3 font-semibold">
               <FaSignOutAlt style={{ fontSize: "40px" }}></FaSignOutAlt>
             </button>

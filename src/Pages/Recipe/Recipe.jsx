@@ -10,7 +10,11 @@ const Recipe = ({ recipe }) => {
     toast("This Recipe added to your Favorite List.");
     setFavorite(true);
   };
-  const notify = () => toast("Wow so easy!");
+  const handleOrdered = () => {
+    toast(
+      "We have received your order, Keep patience, your food will deliver between 30 Minutes"
+    );
+  };
 
   const { recipe_picture, recipe_name, ingredients, cooking_method, ratings } =
     recipe;
@@ -38,6 +42,9 @@ const Recipe = ({ recipe }) => {
               <li className="text-sm ">{method}</li>
             ))}
           </p>
+          <button onClick={handleOrdered} className="btn btn-primary">
+            Order
+          </button>
           <div className="flex ">
             <Rating
               placeholderRating={ratings}
