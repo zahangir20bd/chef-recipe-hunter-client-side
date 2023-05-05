@@ -8,9 +8,10 @@ const Login = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-
+  // UseLocation for redirect to the path where to go
   const from = location.state?.from?.pathname || "/";
 
+  // Login Handler
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
@@ -27,6 +28,8 @@ const Login = () => {
         setError("Wrong email or password. Try again...");
       });
   };
+
+  // Login with Google Handler
   const handleGoogleSign = async () => {
     setError("");
     try {
@@ -36,6 +39,8 @@ const Login = () => {
       setError(error.message);
     }
   };
+
+  // Login with Github Handler
   const handleGithubSign = async () => {
     setError("");
     try {

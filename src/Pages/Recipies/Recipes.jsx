@@ -9,11 +9,13 @@ const Recipes = () => {
   const chef = chefs.find((chef) => {
     return chef.chef_id == id;
   });
+  // destructure element from chef object
   const { chef_id, chef_name, chef_picture, experience, likes, recipes } = chef;
   return (
     <div className="mt-10">
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
+          {/* implement LazyLoad to the chef image */}
           <LazyLoad>
             <img className="max-h-[450px]" src={chef_picture} alt="Album" />
           </LazyLoad>

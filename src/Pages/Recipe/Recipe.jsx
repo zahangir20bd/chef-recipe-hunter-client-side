@@ -6,16 +6,20 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Recipe = ({ recipe }) => {
   const [favorite, setFavorite] = useState(false);
+
+  // favorite button handler, by click the button a toast alert will show and button will disable
   const handleFavorite = () => {
     toast("This Recipe added to your Favorite List.");
     setFavorite(true);
   };
+
+  // food ordered handler
   const handleOrdered = () => {
     toast(
       "We have received your order, Keep patience, your food will deliver between 30 Minutes"
     );
   };
-
+  // destructure element from recipe object
   const { recipe_picture, recipe_name, ingredients, cooking_method, ratings } =
     recipe;
   return (
@@ -46,6 +50,7 @@ const Recipe = ({ recipe }) => {
             Order
           </button>
           <div className="flex ">
+            {/* Use Rating symbol */}
             <Rating
               placeholderRating={ratings}
               emptySymbol={<FaRegStar></FaRegStar>}

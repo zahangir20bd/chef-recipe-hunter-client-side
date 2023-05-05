@@ -6,9 +6,9 @@ import Register from "../Pages/Register/Register";
 import Recipes from "../Pages/Recipies/Recipes";
 import PrivateRoute from "./PrivateRoute";
 import Blogs from "../Pages/Blogs/Blogs";
-import About from "../Pages/About/About";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
+// Create React Routing
 const router = createBrowserRouter([
   {
     path: "/",

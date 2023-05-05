@@ -3,6 +3,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 
+// Create Private Route
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 

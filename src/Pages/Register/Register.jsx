@@ -12,7 +12,7 @@ const Register = () => {
   const handleAccept = (event) => {
     setAccept(event.target.checked);
   };
-
+  // Registration new user handler
   const handleRegister = (event) => {
     event.preventDefault();
     setError("");
@@ -22,6 +22,7 @@ const Register = () => {
     const password = form.password.value;
     const image = form.image.value;
 
+    // Check Password, Password must be 8 characters and at least one uppercase letter, one lowercase letter, one number and one special character
     if (
       !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
         password
@@ -30,7 +31,10 @@ const Register = () => {
       setError(
         "Password must be 8 characters and at least one uppercase letter, one lowercase letter, one number and one special character"
       );
+      return;
     }
+
+    // if name, email, and password is true then create a user and redirect to Home page
     if ((name, email, password)) {
       createUser(name, email, password, image)
         .then((result) => {

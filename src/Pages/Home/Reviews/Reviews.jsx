@@ -30,7 +30,7 @@ const Reviews = () => {
       <h5 className="text-xl text-center mx-auto max-w-[400px]">
         We pride ourselves on what our happy clients say.
       </h5>
-
+      {/* Client Review Start */}
       <div className="flex flex-col md:flex-row gap-4 px-10 mt-20 text-center">
         <div className="px-5">
           <img
@@ -81,6 +81,7 @@ const Reviews = () => {
           </p>
         </div>
       </div>
+      {/* Client Review End */}
     </div>
   );
 };

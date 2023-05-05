@@ -3,6 +3,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Chef = ({ chef }) => {
+  // destructure Element from chef object
   const { chef_id, chef_name, chef_picture, experience, likes, recipes } = chef;
 
   return (
@@ -25,6 +26,7 @@ const Chef = ({ chef }) => {
 
           <div className="card-actions justify-end">
             <button className="btn btn-primary">
+              {/* Sent chef_id dynamically using params */}
               <Link to={`/${chef_id}/recipes`}>View Recipes</Link>
             </button>
           </div>

@@ -10,6 +10,7 @@ const SpecialServices = () => {
         Our Special Services
       </h2>
       <div className="flex flex-col md:flex-row gap-4">
+        {/* Birthday Special Service Start */}
         <div className="text-center px-6">
           <img className="mx-auto" src={birthday} alt="" />
           <h2 className="text-3xl font-bold">Birthday</h2>
@@ -19,6 +20,9 @@ const SpecialServices = () => {
             together one sunny day. Gather your friends together.
           </p>
         </div>
+        {/* Birthday Special Service End */}
+
+        {/* Meeting Special Service Start */}
         <div className="text-center px-6">
           <img className="mx-auto" src={meeting} alt="" />
           <h2 className="text-3xl font-bold">Meetings</h2>
@@ -28,6 +32,9 @@ const SpecialServices = () => {
             the menu, choose the drinks and invite guests.
           </p>
         </div>
+        {/* Meeting Special Service End */}
+
+        {/* Wedding Special Service Start */}
         <div className="text-center px-6">
           <img className="mx-auto" src={wedding} alt="" />
           <h2 className="text-3xl font-bold">Weddings</h2>
@@ -37,6 +44,7 @@ const SpecialServices = () => {
             the real world of best vibes dishes.
           </p>
         </div>
+        {/* Wedding Special Service End */}
       </div>
     </div>
   );

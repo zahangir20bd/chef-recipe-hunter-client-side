@@ -4,6 +4,7 @@ const Blogs = () => {
   return (
     <div className="bg-base-200 rounded-2xl">
       <div className="max-w-6xl mx-auto px-2 py-10 my-10">
+        {/* Blog Question 1 Start */}
         <div className=" mb-10 px-3 py-5">
           <h2 className="text-3xl font-semibold mb-3">
             Tell us the differences between uncontrolled and controlled
@@ -54,6 +55,10 @@ const Blogs = () => {
             state management is not critical.
           </p>
         </div>
+
+        {/* Blog Question 1 End */}
+
+        {/* Blog Question 2 Start */}
         <div className=" mb-10 px-3 py-5 rounded-lg ">
           <h2 className="text-3xl font-semibold mb-3">
             How to validate React props using PropTypes?
@@ -96,6 +101,9 @@ const Blogs = () => {
             of props each component expects.
           </p>
         </div>
+        {/* Blog Question 2 End */}
+
+        {/* Blog Question 3 Start */}
         <div className=" mb-10 px-3 py-5 rounded-lg">
           <h2 className="text-3xl font-semibold mb-3">
             Tell us the difference between nodejs and express js.
@@ -130,6 +138,9 @@ const Blogs = () => {
             features for building web applications more efficiently.
           </p>
         </div>
+        {/* Blog Question 3 End */}
+
+        {/* Blog Question 4 Start */}
         <div className=" mb-10 px-3 py-5 rounded-lg ">
           <h2 className="text-3xl font-semibold mb-3">
             What is a custom hook, and why will you create a custom hook?
@@ -171,6 +182,7 @@ const Blogs = () => {
             ultimately lead to more maintainable and reusable code.
           </p>
         </div>
+        {/* Blog Question 4 End */}
       </div>
     </div>
   );
