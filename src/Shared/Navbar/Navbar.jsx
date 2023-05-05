@@ -14,7 +14,7 @@ const Navbar = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <div className="md:flex justify-between items-center mx-auto p-2">
+    <div className="md:flex justify-between bg-base-200 items-center mx-auto p-2">
       <h2 className="text-2xl font-bold my-4">
         <Link to="/">Recipe Haven</Link>
       </h2>
